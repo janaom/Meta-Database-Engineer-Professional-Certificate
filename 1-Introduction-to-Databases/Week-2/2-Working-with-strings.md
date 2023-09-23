@@ -1,8 +1,8 @@
-Goal
+##Goal
 
 The goal of this exercise is for you to learn how to work with string values in a database. The objective is to allow you to practice working with string data types in SQL. This exercise focuses on the two most used string datatypes in SQL: CHAR and VARCHAR.
 
-Scenario
+##Scenario
 
 Mr. Carl Merkel owns a small business that sells mobile devices called “CM Mobiles”. He wants to create a new table to store key information about customers including customer username, customer full name and customer email address as shown in the following table of data. 
 
@@ -10,7 +10,7 @@ Customer Table:
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/10ae3560-6284-40a7-902b-6d2839e81f9f)
 
 
-Instructions
+##Instructions
 
 Please attempt the below tasks before you continue, so you can check and compare your answers with our solution.
 
@@ -23,14 +23,16 @@ Create a SQL statement with relevant attributes and data types as follows:
 3.      Write a complete SQL statement to create the table inside the cm_devices database.
 
 
-Creating the table
+##Creating the table
 
 1.  When you create a table in a database, you need to identify a suitable name. In this case, you can call it "customers". 
 
 2.  Based on 'CM Mobiles' requirements the customers table will have three columns: 
 
 ●	username 
+
 ●	full name 
+
 ●	email address
 
 3.  The customer username contains alphanumeric values such as: Custom001, Custom002, and Custom003. Notice here that the username is always nine characters in length, so choose the CHAR datatype as it allows for a fixed length of characters. In this case, choose 9 characters, no more or less. Therefore you can declare the username in the SQL statement using the following SQL syntax:
@@ -69,7 +71,7 @@ Press Enter to execute the query. The output result: “Database changed” is d
 
 Now let’s write the SQL statement to create the customers table in the database. 
 
-SQL statement
+##SQL statement
 
 1.      Write CREATE TABLE command followed by the name of the table (customers in this case).
 
@@ -108,7 +110,7 @@ There are other SQL string data types that work like VARCHAR with varied sizes o
 In this exercise, you have practiced how to define string datatypes in a database. Here is an additional task for you to test your skills.
 
 
-Additional task
+##Additional task
 
 Mr. Carl Merkel wants to create another basic table in the cm_devices database to store the customers' feedback. This table must include three columns:
 
@@ -127,7 +129,7 @@ A. Declare the columns with the right data type for each.
 
 B. Write the SQL statement that creates the feedback table.
 
-Solution:
+##Solution:
 
 A:  Feedback id: CHAR(8)
 
