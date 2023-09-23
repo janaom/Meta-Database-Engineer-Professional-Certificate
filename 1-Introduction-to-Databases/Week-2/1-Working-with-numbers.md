@@ -75,9 +75,9 @@ SHOW tables;
 
 
 To check the structure of the devices table, type the following SQL statement and press Enter:
-
+```
 SHOW columns FROM devices;
-
+```
 This displays all the devices table’s columns and data types.
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f55b7c9c-694b-4421-ad86-33a7d45021e5)
