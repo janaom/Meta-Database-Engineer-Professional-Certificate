@@ -2,7 +2,7 @@ Goal
 
 The goal of this exercise is for you to learn how to work with string values in a database. The objective is to allow you to practice working with string data types in SQL. This exercise focuses on the two most used string datatypes in SQL: CHAR and VARCHAR.
 
-##Scenario
+Scenario
 
 Mr. Carl Merkel owns a small business that sells mobile devices called “CM Mobiles”. He wants to create a new table to store key information about customers including customer username, customer full name and customer email address as shown in the following table of data. 
 
@@ -115,8 +115,11 @@ Additional task
 Mr. Carl Merkel wants to create another basic table in the cm_devices database to store the customers' feedback. This table must include three columns:
 
 ●	Feedback ID column,
+
 ●	Feedback type column with a maximum of 100 characters, 
+
 ●	A comment column with a maximum of 500 characters. 
+
 
 The feedback table is illustrated below.
 
