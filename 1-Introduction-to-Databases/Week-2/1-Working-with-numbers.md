@@ -77,7 +77,9 @@ To check the structure of the devices table, type the following SQL statement an
 SHOW columns FROM devices;
 
 This displays all the devices table’s columns and data types.
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f55b7c9c-694b-4421-ad86-33a7d45021e5)
+
 
 
 In this exercise, you have practiced how to define numeric datatypes in database. Here is an additional task for you to test your skills.
@@ -85,7 +87,9 @@ In this exercise, you have practiced how to define numeric datatypes in database
 Additional task (optional)
 
 Mr. Merkel wants to create another basic table in the database to store data about the stock of the devices including device ID, quantity available in the stock and total available cost of the quantity. This basic table is shown in the table below, with each column showing device ID, the quanity in stock and the total price. 
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/e40555d0-fbc3-4560-8816-c59465e09c0b)
+
 
 
 Based on the table and information above, complete the following:
