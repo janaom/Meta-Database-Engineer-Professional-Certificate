@@ -20,15 +20,15 @@ Please attempt the tasks below before you continue, so that you can check and co
 Task 1: Create a database called cm_devices
 
 1.	Type the following SQL statement inside the SQL terminal editor in the Coursera platform:
-
+```
 CREATE DATABASE cm_devices; 
-
+```
 2.	Press Enter to execute the create database statement. 
 
 3.	Make sure you select the database you want to create the table inside of by typing the following SQL statement: 
-
+```
 USE cm_devices; 
-
+```
 4.	The SQL ‘USE’ keyword is used to select a database in MySQL followed by the name of the database. Press Enter to execute the query. The output will be “Database changed”, as demonstrated in the following screenshot:
    ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/b8da5eb2-6963-4b40-adf8-8afdb03df498)
 
@@ -59,15 +59,15 @@ Based on CM Mobiles’ requirements, the mobile devices table must contain three
 ●	The device name with VARCHAR max 50 char limit.
 
 3.5	Add a closing parenthesis and a semi-colon at the end of the SQL statement. The complete statement should replicate the following syntax:
-
+```
 CREATE TABLE devices (deviceID int, deviceName varchar(50), price decimal);
-
+```
 3.6	Execute the query by pressing Enter.
 
 If you have followed all the steps correctly, you should now be able to access the devices table that was created inside the cm_mobiles database by typing:
-
+```
 SHOW tables;
-
+```
 3.7	Press Enter. 
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/2c48081a-aec1-4d6b-9944-08373b73aa4f)
