@@ -69,6 +69,7 @@ If you have followed all the steps correctly, you should now be able to access t
 SHOW tables;
 
 3.7	Press Enter. 
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/2c48081a-aec1-4d6b-9944-08373b73aa4f)
 
 
