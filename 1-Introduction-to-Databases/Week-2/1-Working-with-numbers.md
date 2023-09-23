@@ -29,7 +29,9 @@ CREATE DATABASE cm_devices;
 
 USE cm_devices; 
 
-4.	The SQL ‘USE’ keyword is used to select a database in MySQL followed by the name of the database. Press Enter to execute the query. The output will be “Database changed”, as demonstrated in the following screenshot: 
+4.	The SQL ‘USE’ keyword is used to select a database in MySQL followed by the name of the database. Press Enter to execute the query. The output will be “Database changed”, as demonstrated in the following screenshot:
+   ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/b8da5eb2-6963-4b40-adf8-8afdb03df498)
+
 
 Task 2: Create a SQL statement with relevant attributes and data types 
 
@@ -67,18 +69,24 @@ If you have followed all the steps correctly, you should now be able to access t
 SHOW tables;
 
 3.7	Press Enter. 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/2c48081a-aec1-4d6b-9944-08373b73aa4f)
+
 
 To check the structure of the devices table, type the following SQL statement and press Enter:
 
 SHOW columns FROM devices;
 
 This displays all the devices table’s columns and data types.
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f55b7c9c-694b-4421-ad86-33a7d45021e5)
+
 
 In this exercise, you have practiced how to define numeric datatypes in database. Here is an additional task for you to test your skills.
 
 Additional task (optional)
 
 Mr. Merkel wants to create another basic table in the database to store data about the stock of the devices including device ID, quantity available in the stock and total available cost of the quantity. This basic table is shown in the table below, with each column showing device ID, the quanity in stock and the total price. 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/e40555d0-fbc3-4560-8816-c59465e09c0b)
+
 
 Based on the table and information above, complete the following:
 
