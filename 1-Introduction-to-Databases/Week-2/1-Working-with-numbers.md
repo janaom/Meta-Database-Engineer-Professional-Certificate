@@ -112,4 +112,7 @@ Solution:
 
      Total cost Decimal
 
-3: CREATE TABLE stock (deviceID int, quantity int, totalPrice decimal);
+3: 
+```
+CREATE TABLE stock (deviceID int, quantity int, totalPrice decimal);
+```
