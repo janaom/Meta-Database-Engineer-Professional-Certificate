@@ -6,6 +6,10 @@ Scenario
 
 Mr. Carl Merkel owns a small business that sells mobile devices called “CM Mobiles”. He wants to create a new table to store key information about customers including customer username, customer full name and customer email address as shown in the following table of data. 
 
+Customer Table:
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/10ae3560-6284-40a7-902b-6d2839e81f9f)
+
+
 Instructions
 
 Please attempt the below tasks before you continue, so you can check and compare your answers with our solution.
@@ -50,16 +54,18 @@ Note: You need to have a database to create the table inside of it. If you don�
 
 
 1.	Type the following SQL statement inside the SQL terminal editor in the Coursera platform.
-
+```
 CREATE DATABASE cm_devices;
-
+```
 2.	Press Enter to execute the CREATE DATABASE statement.
 
 3.	Make sure you select the database in order to use it by typing the following SQL statement.
-
+```
 USE cm_devices;
-
+```
 Press Enter to execute the query. The output result: “Database changed” is displayed in the terminal section. 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/43efc98b-990b-4752-92f8-8388ed3b5b20)
+
 
 Now let’s write the SQL statement to create the customers table in the database. 
 
@@ -72,24 +78,30 @@ SQL statement
 3.      Assign each column a suitable datatype as described earlier. 
 
 4.      Add a closing parenthesis and a semi-colon at the end of the SQL statement. The complete SQL statement is shown below. 
-
+```
 CREATE TABLE customers (username CHAR(9), fullName VARCHAR(100), email VARCHAR(255)); 
-
+```
 5.      Execute the query by pressing enter.
 
 If you have followed all the steps correctly, you should now be able to see the customers table created inside the cm_devices database by typing:
 
 SHOW tables;
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/49be597c-696f-4a57-a3ad-a7dcd8429038)
+
+
 Press enter to execute the query. The output displays all tables existing in the “cm_devices” database.
 
 Well done! You have correctly defined the string data types and created the customer table.
 
 If you want to check the structure of the customers table type the following SQL statement and press Enter.
-
+```
 SHOW columns FROM customers; 
-
+```
 This will show you all the customers table columns and data types.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/5964785c-d2ea-4ed1-8961-92634f6cbc36)
+
 
 There are other SQL string data types that work like VARCHAR with varied sizes of lengths of characters. For example, the “TEXT” data type can be used to define columns requiring less than 65535 characters. This data type could be used to store text content like an article.
 
@@ -106,6 +118,9 @@ Mr. Carl Merkel wants to create another basic table in the cm_devices database t
 
 The feedback table is illustrated below.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/3dfd8cbb-5466-454b-85b8-e679d46e973b)
+
+
 You are required to complete the following tasks:
 
 A. Declare the columns with the right data type for each. 
@@ -120,4 +135,7 @@ A:  Feedback id: CHAR(8)
 
       Comment:  TEXT(500)  
 
-B:  CREATE TABLE feedback(feedbackID CHAR(8), feedbackType VARCHAR(100), comment TEXT(500));
+B:  
+```
+CREATE TABLE feedback(feedbackID CHAR(8), feedbackType VARCHAR(100), comment TEXT(500));
+```
