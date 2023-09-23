@@ -10,6 +10,7 @@ Mr. Carl Merkel owns a small business named CM Mobiles that sells mobile devices
 ●	And the price of the device.
 
 This information is displayed in the following table:
+![Screenshot](C:\Users\janap\Documents\Screenshot-2023-09-23-203952.png)
 
 Instructions 
 
