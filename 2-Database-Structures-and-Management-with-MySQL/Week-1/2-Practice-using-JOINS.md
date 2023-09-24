@@ -9,6 +9,9 @@ Full name,
 
 and phone number.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/ef296931-1b2c-4304-bd31-e1fa799b8f11)
+
+
 The Bookings table contains the following data on each booking: 
 
 booking ID, 
@@ -20,6 +23,9 @@ table number,
 number of guests,
 
 and the ID of the customer who made the booking.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/bab0c001-938d-4bbb-846a-da758383c354)
+
 
 Note: Before you begin, make sure you know how to access 
 MySQL environment
@@ -64,6 +70,12 @@ Task 1: Little Lemon want a list of all customers who have made bookings. Write 
 
 The expected output result should be the same as the following screenshot (assuming that you have created and populate the tables correctly.)
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/8e296434-e148-4ea8-afd9-529dbb016bd3)
+
+
 Task 2: Little Lemon want to view information about all existing customers with bookings that have been made so far. This data must include customers who haven’t made any booking yet. 
 
 Write a LEFT JOIN SQL statement to view the customer id from Customers table and the related booking id from the Bookings table. The expected output result should be the same as the following screenshot (assuming that you have created and populate the tables correctly.)
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f1b97e09-f528-4c61-ae3c-95ebf8c858e6)
+
