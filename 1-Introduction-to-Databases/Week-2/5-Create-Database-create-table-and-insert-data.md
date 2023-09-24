@@ -63,6 +63,9 @@ The customers table is shown as part of the tables in the bookshop database.
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/c5bf6020-d965-4904-b853-f68ab45a00fe)
 
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/a81fce79-3e5c-45ab-84e9-dbac6a8e77f7)
+
+
 
 Task 3: Insert data
 
