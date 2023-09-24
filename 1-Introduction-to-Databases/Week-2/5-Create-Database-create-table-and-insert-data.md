@@ -53,6 +53,7 @@ CREATE TABLE customers (customerID int, customerName varchar(50), customerAddres
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/712765ce-b60f-4441-adfc-3a58a22ae523)
 
 
+
 4. To show the table you have already created, you can simply type:
 ```
 SHOW tables;
