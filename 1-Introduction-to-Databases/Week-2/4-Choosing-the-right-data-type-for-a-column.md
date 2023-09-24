@@ -96,7 +96,9 @@ If you want to check the structure of the invoices table, type the following SQL
 SHOW columns FROM invoice; 
 ```
 This statement displays the invoice table structure.
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/3a8f6014-b30e-4dc9-91b1-eb6ba0079faf)
+
 
 
 
