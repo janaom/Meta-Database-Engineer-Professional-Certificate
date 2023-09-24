@@ -103,3 +103,5 @@ Write the following SQL statement in the SQL editor in your terminal, then press
 ```
 INSERT INTO customers(customerID, customerName, customerAddress) VALUES (2, "James", "24 Carlson Rd London") ;
 ```
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/ad2d93bf-5fbe-4d5c-9393-519e45a2d238)
+
