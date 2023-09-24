@@ -71,7 +71,9 @@ If you have followed all the steps correctly, you should now see the players tab
 SHOW tables;
 ```
 6. Press Enter to retreive the players table inside the football club database.  There may be more tables present if you have already created other tables within this database. 
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/42b37324-4043-4061-8d84-bdd306a92a1b)
+
 
 
 In this exercise, you have practiced how to create a basic table inside a database. Here is an optional additional task for you to complete.
