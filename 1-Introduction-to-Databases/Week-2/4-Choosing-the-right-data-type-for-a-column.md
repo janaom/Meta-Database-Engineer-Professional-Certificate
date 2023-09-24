@@ -9,6 +9,9 @@ This exercise demonstrates how to choose suitable data types for a variety of co
 Scenario
 
 Mr. Carl Merkel owns a small business that sells mobile devices called “CM Mobiles” in Harrow town near London. He wants to create a database to store key information about customers’ orders in order to generate invoices for his customers including customer name, order date, quantity and total price. This data can be seen in the following invoice table: 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/867a489b-78c3-474b-8e8e-ea06a5aa8827)
+
+
 
 Instructions
 
@@ -51,15 +54,18 @@ Note: You need to have a database so that you can create the table inside it. If
 
 1. Type the following SQL statement inside the SQL terminal editor on the Coursera platform:
 
-
+```
 CREATE DATABASE cm_devices; 
-
+```
 
 2. Press Enter to execute the create database statement. 
 
 3. Make sure you select the database to use it by typing the following SQL statement and press Enter:
-
+```
 USE cm_devices; 
+```
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/6111562c-46f6-4fab-ba59-7872783f6b8a)
+
 
 Create the SQL statement as follows:
 
@@ -71,23 +77,27 @@ Create the SQL statement as follows:
 
 4. Add a closing parenthesis and a semi-colon to the end of the SQL statement as follows: 
 
-
+```
 CREATE TABLE invoice (customerName VARCHAR(50), orderDate DATE, quantity INT, price DECIMAL); 
-
+```
 
 Press Enter to execute the query
 
 If you have followed all the steps correctly, you should now be able to see the invoices table created inside the cm_devices database by typing:
-
+```
 SHOW tables;
-
+```
 Press Enter to execute the query. The output result shows the tables within the cm_devices database. 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/0ddcaf7f-5c59-4e16-9bef-98b380c1520f)
+
 
 If you want to check the structure of the invoices table, type the following SQL statement and press Enter.
-
+```
 SHOW columns FROM invoice; 
-
+```
 This statement displays the invoice table structure.
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/3a8f6014-b30e-4dc9-91b1-eb6ba0079faf)
+
 
 
 In this exercise, you have learned how to choose suitable data types for a variety of columns.
