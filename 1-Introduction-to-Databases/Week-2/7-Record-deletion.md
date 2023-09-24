@@ -56,6 +56,7 @@ Execute the query by pressing the Enter button on the keyboard. The SQL statemen
 To view the content of the customers table after deleting the record, you can type the following select statement:
 
 This statement displays all data that exists in the customer table.
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/9c1ab860-40c9-4297-99ef-6958b233f735)
 
 
