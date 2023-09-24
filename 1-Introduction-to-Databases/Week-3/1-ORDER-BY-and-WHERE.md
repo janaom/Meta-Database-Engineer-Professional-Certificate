@@ -60,6 +60,10 @@ INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, S
 
 INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (6, 'Jennifer', 'Peterson', 'Rogers Canada', '700 W Pender Street', 'Vancouver', 'BC', 'Canada', 'V6C 1G8', '+1 (604) 688-2255', '+1 (604) 688-8756', 'jenniferp@rogers.ca', 3); 
 ```
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/40fd83a8-0200-4224-8dd4-1f21102eb15d)
+
+
 Instructions 
 
 Please attempt the following tasks before you continue, so that you can check and compare your answers with our solution. 
@@ -95,6 +99,10 @@ SELECT CustomerID, FirstName, LastName, City, State, Country
 FROM Customer 
 ORDER BY FirstName;
 ```
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/acfba441-f66c-4f10-8105-41b87fb4ba6e)
+
+
 Notice now that all data from the "customer" table is displayed again. However, the data is now sorted by the "First Name" column in Alphabetical order from A to Z.  This makes it easier for the users of the database to find the customers they are looking for.
 
 
