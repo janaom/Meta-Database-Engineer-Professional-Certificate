@@ -100,6 +100,8 @@ This statement displays the invoice table structure.
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/3a8f6014-b30e-4dc9-91b1-eb6ba0079faf)
 
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/cb87d109-512f-4d3a-b4b5-4d00984d4820)
+
 
 
 In this exercise, you have learned how to choose suitable data types for a variety of columns.
