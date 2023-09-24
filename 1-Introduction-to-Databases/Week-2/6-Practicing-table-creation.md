@@ -25,7 +25,7 @@ Task 1: Create your database
 
 1. You cannot build tables if there is no relevant database available to create tables within. Therefore, let’s create a new database for Mr. Anderson’s data by typing the following SQL statement inside the SQL code editor in Coursera platform as displayed below.
 ```
-CREATE DATABASE football_club
+CREATE DATABASE football_club;
 ```
 2. Press enter to execute the create football club database.
 
@@ -75,6 +75,8 @@ SHOW tables;
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/42b37324-4043-4061-8d84-bdd306a92a1b)
 
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/2dda0e9c-ee82-42aa-b9c9-dc5018bf45ad)
+
 
 In this exercise, you have practiced how to create a basic table inside a database. Here is an optional additional task for you to complete.
 
@@ -90,3 +92,5 @@ Write the following SQL statement and press Enter to execute it:
 ```
 CREATE TABLE games(gameID INT, gameDate DATE, score INT);
 ```
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/c43dd54a-d7af-4030-9328-0274501df501)
+
