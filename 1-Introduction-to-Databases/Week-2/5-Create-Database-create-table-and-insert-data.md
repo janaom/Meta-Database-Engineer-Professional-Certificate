@@ -50,6 +50,7 @@ Of course, each column must be assigned a suitable datatype. Once all required c
 CREATE TABLE customers (customerID int, customerName varchar(50), customerAddress varchar(255));
 ```
 3. Click enter to execute the SQL statement. The output result below confirms the query is OK, which means the table has been successfully created.
+
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/712765ce-b60f-4441-adfc-3a58a22ae523)
 
 
