@@ -1,13 +1,26 @@
 Lab Instructions
+
 Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. In this lab, you must complete the following tasks to make it easier for Little Lemon restaurant to print relevant booking and menu details with the help of subqueries.
 
 The MenuItems table contains information about menu items as shown in the following screenshot.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/fed8c5d0-9f62-4a61-baa9-2af7ea37dd1e)
+
+
 The Menus table contains information about the menus as shown in the following screenshot.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/81670ed2-d85b-48a4-9a56-9804700ecfb2)
+
 
 The Bookings table contains information about guest bookings as shown in the following screenshot.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/129d7dea-e993-4d2a-bd0f-7cc64851ca7e)
+
+
 The TableOrders table contains information about orders as shown in the following screenshot.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/a4e704a4-5829-41a5-949e-5c076f9b32b6)
+
 
 Prerequisites
 
@@ -110,23 +123,33 @@ Using the comparison operators and the ALL and NOT EXISTS operators with subquer
 
 
 Exercise Instructions
+
 Please attempt the following tasks.
 
 Task 1: Write a SQL SELECT query to find all bookings that are due after the booking of the guest ‘Vanessa McCarthy’.
 
 The expected output result should be the same as the following screenshot (assuming that you have created and populated the orders tables correctly). 
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/ff20c635-87ca-4381-a70d-1b2061ccbaab)
+
 
 Task 2: Write a SQL SELECT query to find the menu items that are more expensive than all the 'Starters' and 'Desserts' menu item types.
 
 The expected output result should be the same as the following screenshot (assuming that you have created and populated the orders tables correctly). 
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/7711401b-96f5-46e9-83e6-81fe35827656)
+
+
 Task 3: Write a SQL SELECT query to find the menu items that costs the same as the starter menu items that are Italian cuisine.
 
 The expected output result should be the same as the following screenshot (assuming that you have created and populated the orders tables correctly). 
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/736abd1d-b30e-4222-b713-970397ab8ae8)
+
 
 Task 4: Write a SQL SELECT query to find the menu items that were not ordered by the guests who placed bookings.
 
 The expected output result should be the same as the following screenshot (assuming that you have created and populated the orders tables correctly). 
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/16208c60-fd11-47cb-9509-33e6a3ef0f54)
 
