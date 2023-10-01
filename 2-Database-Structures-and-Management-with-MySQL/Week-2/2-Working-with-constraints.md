@@ -1,4 +1,4 @@
-Lab Instructions
+# Lab Instructions
 
 Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries. The jewelry company primarily operates online and has a small storefront in Austin, Texas with an atelier attached for browsing. The company approached you to create three tables for their database called 'Clients', 'Orders' and 'Items' respectively. Each database must have all necessary constraints applied as specified in each task.
 
@@ -13,18 +13,18 @@ The relationship between the three table is illustrated in the following entity 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/bff7769c-e6f8-4a7e-a5b0-5f3dcb01d410)
 
 
-Prerequisites
+# Prerequisites
 
 To complete this lab, you must have the Mangata and Gallo database in MySQL, so that you can create the three tables within it. If you do not have the database, then create it in MySQL using the following instructions.
 
 The code to create and use the database is as follows:
 
 1: Create database
-```
+```SQL
 CREATE DATABASE Mangata_Gallo;
 ```
 2: Use database
-```
+```SQL
 USE Mangata_Gallo; 
 ```
 
@@ -75,3 +75,55 @@ COST Decimal(6,2) and NOT NULL
 The expected structure of the table should be the same as the following screenshot (assuming that you have created and populated the tables correctly.)
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/b6b6fcba-f115-4e85-8d6a-bec0be64e5f9)
+
+# Solution
+
+Once you have completed these tasks, you can check and compare your answers with the solutions.
+
+Task 1 solution: Create the Clients table with the following columns and constraints.
+
+ClientID: INT, NOT NULL and PRIMARY KEY
+
+FullName: VARCHAR(100) NOT NULL
+
+PhoneNumber: INT, NOT NULL and UNIQUE
+
+```SQL
+CREATE TABLE Clients (ClientID INT PRIMARY KEY, FullName VARCHAR(100) NOT NULL, PhoneNumber INT NOT NULL UNIQUE);
+```
+
+Task 2 solution: Create the Items table with the following attributes and constraints:
+
+ItemID: INT, NOT NULL and PRIMARY KEY
+
+ItemName: VARCHAR(100) and NOT NULL
+
+Price: Decimal(5,2) and NOT NULL
+
+```SQL
+CREATE TABLE Items (ItemID INT PRIMARY KEY, ItemName VARCHAR(100) NOT NULL, Price DECIMAL(5,2) NOT NULL);
+```
+
+Task 3 solution: Create the Orders table with the following constraints.
+
+OrderID: INT, NOT NULL and PRIMARY KEY
+
+ClientID: INT, NOT NULL and FOREIGN KEY
+
+ItemID: INT, NOT NULL and FOREIGN KEY
+
+Quantity: INT, NOT NULL and maximum allowed items in each order 3 only
+
+COST Decimal(6,2) and NOT NULL
+
+```SQL
+CREATE TABLE Orders ( 
+OrderID INT PRIMARY KEY,  
+ItemID INT NOT NULL,   
+ClientID INT NOT NULL,   
+Quantity INT NOT NULL CHECK (Quantity < 4),  
+Cost DECIMAL(6,2) NOT NULL,  
+FOREIGN KEY (ClientID) REFERENCES Clients (ClientID), 
+FOREIGN KEY (ItemID) REFERENCES Items (ItemID) 
+);
+```
