@@ -3,6 +3,9 @@ Lucky Shrub is a medium-sized garden design firm that sells indoor and outdoor p
 
 The Orders table used for this lab contains the following data: OrderID, Department, OrderDate, OrderQty and OrderTotal as shown below.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/30140b31-6f99-437b-9da8-dc2871e09b90)
+
+
 Prerequisites
 
 To complete this lab, you must have the Lucky Shrub database created in MySQL. You must also create and populate the Orders table with relevant data inside the Lucky Shrub database.
@@ -39,17 +42,29 @@ Task 1: Write a SQL SELECT statement to group all records that have the same ord
 
 The expected output result should be the same as the following screenshot, assuming that you have created and populated the tables correctly.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/1ed164cb-8db4-4f13-bf22-d1d8b3420746)
+
+
 Task 2: Write a SQL SELECT statement to retrieve the number of orders placed on the same day.
 
 The expected output result should be the same as the following screenshot assuming that you have created and populated the tables correctly.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/7175456b-e476-49a0-b756-1b1b65825b47)
+
 
 Task 3: Write a SQL SELECT statement to retrieve the total order quantities placed by each department.
 
 The expected output result should be the same as the following screenshot assuming that you have created and populated the tables correctly.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/30bee700-7d37-48e3-a247-29197bf96baa)
+
+
 Task 4: Write a SQL SELECT statement to retrieve the number of orders placed on the same day between the following dates: 1st June 2022 and 30th June 2022.
 
 The expected output result should be the same as the following screenshot assuming that you have created and populated the tables correctly.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/10826452-27c3-4884-8eca-e3aea1e15cd8)
+
 
 
 
