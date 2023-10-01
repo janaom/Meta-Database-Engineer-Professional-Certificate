@@ -2,6 +2,9 @@ Lab Scenario
 
 Lucky Shrub need to perform a series of queries on the data in the tables in their database. The tables they need to query are the Orders, Products and Activity tables. An overview of these tables is shown in the following ER diagram. Lucky Shrub need your help to optimize their queries so that they can extract the data they need quickly and efficiently.  
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/bab05e05-428f-4d7b-baee-45aee89a17d5)
+
+
 Prerequisites
 
 To complete this lab, you must first make sure that the Lucky Shrub database and tables have been built within your MySQL environment. The code to create the database and tables is as follows:
@@ -94,7 +97,10 @@ Lucky Shrub need to find out how many orders were placed by clients with the fol
 SELECT CONCAT("Cl1: ", COUNT(OrderID), "orders") AS "Total number of orders" FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl1" UNION SELECT CONCAT("Cl2: ", COUNT(OrderID), "orders") FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl2" UNION SELECT CONCAT("Cl3: ", COUNT(OrderID), "orders") FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl3"; 
 ```
 
- The output result of the query is shown in the following screenshot:
+The output result of the query is shown in the following screenshot:
+
+ ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/6705b64c-7df0-44d2-9a42-c7cb601b499a)
+
 
 Help Lucky Shrub to optimize this query by recreating it as a common table expression (CTE).
 
@@ -105,11 +111,17 @@ Lucky Shrub need you to help them to create a prepared statement called GetOrder
 
 The output result of an example of this query that takes the parameters of ClientID (Cl1) and Year (2020) is shown in the screenshot below.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/62d300be-c389-483d-8e4f-ff809b4ed98a)
+
+
 Task 3
 
 The Lucky Shrub system logs the ClientID of each client, and the ProductID of the products they order, in a JSON Properties column in the Activity table.
 
 The screenshot below shows the data content inside the Activity table.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/472ffbe5-2cfd-4ef7-b08a-3b27335bd6a5)
+
 
 You need to utilize the Properties column data to output the product id, name, buy price and sell price of the product where the Order value in the Activity table is True.
 
@@ -123,4 +135,5 @@ Use the following code to access the property value without double quotations fr
 
 The output result of the query is shown in the screenshot below.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/46dfc360-f1ab-43f9-93c4-7637e7d556ed)
 
