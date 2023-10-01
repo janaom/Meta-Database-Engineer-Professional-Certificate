@@ -1,4 +1,4 @@
-Lab Instructions
+# Lab Instructions
 
 Lucky Shrub need to execute a series of SELECT queries against their database to retrieve information on their employees and client orders.
 
@@ -20,33 +20,33 @@ The Employees table contains information about the EmployeeID, FullName, Role, D
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/91957a6b-1dba-40ae-b5ce-d0c5c8d96d45)
 
 
-Prerequisites
+# Prerequisites
 
 First, you must create the Lucky Shrub database in your MySQL environment. Then, you must create and populate the Orders and Employees tables with the relevant data.
 
 The code to create the database and related tables is as follows:
 
 1: Create the database
-```
+```SQL 
 CREATE DATABASE Lucky_Shrub; 
 ```
 2: Use the database
-```
+```SQL 
 USE Lucky_Shrub;
 ```
 3: Create the Orders table
 
-```
+```SQL 
 CREATE TABLE Orders(OrderID INT NOT NULL, ClientID VARCHAR(10) DEFAULT NULL, ProductID VARCHAR(10) DEFAULT NULL, Quantity INT DEFAULT NULL, Cost DECIMAL(6,2) DEFAULT NULL, Date DATE DEFAULT NULL, PRIMARY KEY (OrderID)); 
 ```
 4: Create the Employees table
 
-```
+```SQL 
 CREATE TABLE Employees(EmployeeID INT DEFAULT NULL, FullName VARCHAR(100) DEFAULT NULL, Role VARCHAR(50) DEFAULT NULL, Department VARCHAR(255) DEFAULT NULL); 
 ```
 5: Insert data into the Orders table
 
-```
+```SQL 
 INSERT INTO Orders (OrderID, ClientID, ProductID , Quantity, Cost, Date)  
 VALUES  
 (1, "Cl1", "P1", 10, 500, "2020-09-01"), 
@@ -81,7 +81,7 @@ VALUES
 ```
 5: Insert data into the Employees table
 
-```
+```SQL 
 INSERT INTO Employees (EmployeeID, FullName,  Role, Department)  
 VALUES    
 (1, "Seamus Hogan", "Manager", "Management"),    
@@ -103,7 +103,7 @@ Please attempt the following tasks:
 
 Task 1
 Lucky Shrub need data on client orders. They have written the following SELECT query to retrieve all data from the Orders table:
-```
+```SQL 
 SELECT * FROM Orders;
 ```
 
@@ -118,7 +118,7 @@ The expected output result should be the same as the following screenshot when y
 
 Task 2
 Lucky Shrub need to find the order placed by the client Cl1. They have written the following query to complete this task:
-```
+```SQL 
 SELECT * FROM Orders WHERE ClientID ='Cl1'; 
 ```
 However, this query's execution plan shows that it does not use an index to perform this search, as indicated by the NULL values in possible_keys and keys columns.  
@@ -136,7 +136,7 @@ The expected output result should be the same as the following screenshot when e
 Task 3
 Lucky Shrub have written the following SELECT query to find the details of the employee whose last name is 'Tolo'
 
-```
+```SQL 
 SELECT * FROM Employees WHERE FullName LIKE '%Tolo'; 
 ```
 
@@ -155,4 +155,109 @@ The expected output result when you execute the rewritten query should be the sa
 
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f4337617-2c88-44dd-8cd0-fa90f542d393)
+
+
+# Solution: SELECT statement optimization in MySQL
+
+Once you have completed the tasks in the ungraded lab, you can check and compare your answers with the following solutions.
+
+
+Task 1 solution
+Lucky Shrub need data on client orders. They have written the following SELECT query to retrieve all data from the Orders table:
+
+```SQL
+SELECT * 
+FROM Orders;
+```
+
+However, the data they need is contained within the OrderID, ProductID, Quantity and Date columns. So, these are the important fields that their query must target. Targeting other columns in the table is an inefficient use of resources.
+
+Rewrite the SELECT statement so that it is optimized.
+
+The expected output result should be the same as the following screenshot when you execute the rewritten query.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/a10615f8-76a4-45d2-8ab8-3e692a24f54b)
+
+Solution
+```SQL
+SELECT OrderID, ProductID, Quantity, Date 
+FROM Orders;
+```
+
+Task 2 solution
+Lucky Shrub need to find the order placed by the client Cl1. They have written the following query to complete this task:
+```SQL
+SELECT * 
+FROM Orders 
+WHERE ClientID='Cl1';
+```
+
+However, this query’s execution plan shows that it does not use an index to perform this search, as indicated by the NULL values in possible_keys and keys columns.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/1873cda4-ae4f-4cad-8d86-44484d01e469)
+
+Help Lucky Shrub to optimize this query by creating an index named IdxClientID on the required column of the Orders table. Once you have created the index, run the same SELECT statement as above with the EXPLAIN statement.
+
+The expected output result should be the same as the following screenshot when executed:  
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/bcea19eb-f288-49bf-8e51-6fbdfea3b745)
+
+Solution
+
+Create the index using the following statement: 
+```SQL
+CREATE INDEX IdxClientID ON Orders(ClientID);
+```
+
+Then call the SELECT query using the EXPLAIN statement:
+```SQL
+EXPLAIN SELECT * 
+FROM Orders 
+WHERE ClientID='Cl1';
+```
+
+Task 3 Solution
+Lucky Shrub have written the following SELECT query to find the details of the employee whose last name is Tolo:
+```SQL
+SELECT * 
+FROM Employees 
+WHERE FullName LIKE '%Tolo';
+```
+
+However, there’s an index on the FullName column which the query cannot use because it contains a leading wildcard (%) in the WHERE clause condition.
+
+The following steps can be taken to eliminate the leading wildcard:
+
+Step 1: Add a new column to the Employees table called ReverseFullName.
+
+Step 2: Populate the ReverseFullName column with the name of each employee as its values, but in reverse.
+
+Step 3: Finally, create an index named IdxReverseFullName on the ReverseFullName column.
+
+Follow these steps first and then rewrite the SELECT query and improve its performance so that it uses a trailing wildcard instead of the leading wild card.
+
+The expected output result when you execute the rewritten query should be the same as the result in the following screenshot:
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/ed582c25-5710-4037-8daf-84b476e0aa01)
+
+```SQL
+ALTER TABLE Employees ADD COLUMN ReverseFullName VARCHAR(255); -- Add the ReverseFullName column
+
+UPDATE Employees
+SET ReverseFullName = CONCAT(
+    SUBSTRING_INDEX(FullName, ' ', -1),  -- Extract last name
+    ' ',                                 -- Add a space
+    SUBSTRING_INDEX(FullName, ' ', 1)   -- Extract first name
+);
+
+CREATE INDEX IdxReverseFullName ON Employees (ReverseFullName); -- Index
+
+SELECT * 
+FROM Employees 
+WHERE ReverseFullName LIKE 'Tolo%';
+```
+
+
+
+
 
