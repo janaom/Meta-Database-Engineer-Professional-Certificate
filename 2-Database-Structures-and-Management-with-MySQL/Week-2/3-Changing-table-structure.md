@@ -1,4 +1,4 @@
-Lab Instructions
+# Lab Instructions
 
 Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries. The jewelry company primarily operates online and has a small storefront in Austin, Texas with an atelier attached for browsing. The company has asked you to create a table in their database called 'Staff'. This table must contain the records of all staff members.
 
@@ -6,16 +6,16 @@ Note: Before you begin, make sure you know how to access
 MySQL environment
  
 
-Prerequisites
+# Prerequisites
 
 To complete this lab, you need to have the Mangata and Gallo database so that you can create the 'Staff’ table inside it. If you don't have this database, complete the following steps to create it.
 
 1: Create database
-```
+```SQL
 CREATE DATABASE Mangata_Gallo;
 ```
 2: Use database
-```
+```SQL
  USE Mangata_Gallo;
 ```
 
@@ -78,3 +78,40 @@ The expected structure of the table after removing the Phone Number column shoul
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/ed104194-2d56-491e-98b2-e1feef3e2cb9)
 
 Once you have completed these tasks, you can check and compare your answers with the solution in the reading "Exercise: Changing table structure (Exercise solution)".
+
+# Solution
+
+Task 1 solution: Write a SQL statement that creates the Staff table with the following columns: 
+
+StaffID: INT 
+
+FullName: VARCHAR(100) 
+
+PhoneNumber: VARCHAR(10)
+```SQL
+CREATE TABLE Staff (StaffID INT, FullName VARCHAR(100), PhoneNumber VARCHAR(10));
+```
+
+Task 2 solution: Write a SQL statement to apply the following constraints to the Staff table:
+
+StaffID: INT NOT NULL and PRIMARY KEY 
+
+FullName: VARCHAR(100) and NOT NULL 
+
+PhoneNumber: INT NOT NULL
+```SQL
+ALTER TABLE Staff MODIFY StaffID INT PRIMARY KEY, MODIFY FullName VARCHAR(100) NOT NULL, MODIFY PhoneNumber INT NOT NULL;
+```
+
+Task 3 solution: Write a SQL statement that adds a new column called 'Role' to the Staff table with the following constraint: 
+
+Role: VARCHAR(50) and NOT NULL
+```SQL
+ALTER TABLE Staff ADD COLUMN Role VARCHAR(50) NOT NULL;
+```
+
+Task 4 solution: Write a SQL statement that drops the Phone Number column from the 'Staff' table.    
+```SQL
+ALTER TABLE Staff DROP COLUMN PhoneNumber;
+```
+
