@@ -1,34 +1,34 @@
-Lab Scenario
+# Lab Scenario
 
 Lucky Shrub need to perform a series of queries on the data in the tables in their database. The tables they need to query are the Orders, Products and Activity tables. An overview of these tables is shown in the following ER diagram. Lucky Shrub need your help to optimize their queries so that they can extract the data they need quickly and efficiently.  
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/bab05e05-428f-4d7b-baee-45aee89a17d5)
 
 
-Prerequisites
+# Prerequisites
 
 To complete this lab, you must first make sure that the Lucky Shrub database and tables have been built within your MySQL environment. The code to create the database and tables is as follows:
 
 1. Create the database:
-```
+```SQL
 CREATE DATABASE IF NOT EXISTS Lucky_Shrub;
 ```
 
 2. Use the database
-```
+```SQL
 USE Lucky_Shrub;
 ```
 
 3. Create the database tables
 
-```
+```SQL
 CREATE TABLE IF NOT EXISTS Orders (OrderID INT NOT NULL PRIMARY KEY, ClientID VARCHAR(10), ProductID VARCHAR(10), Quantity INT, Cost DECIMAL(6,2), Date DATE);
 CREATE TABLE IF NOT EXISTS Products (ProductID VARCHAR(10), ProductName VARCHAR(100), BuyPrice DECIMAL(6,2), SellPrice DECIMAL(6,2), NumberOfItems INT);
 CREATE TABLE IF NOT EXISTS Activity (ActivityID INT PRIMARY KEY, Properties JSON ); 
 ```
 4. Populate the tables with data
 
-```
+```SQL
 INSERT INTO Orders (OrderID, ClientID, ProductID , Quantity, Cost, Date) VALUES 
 (1, "Cl1", "P1", 10, 500, "2020-09-01" ), 
 (2, "Cl2", "P2", 5, 100, "2020-09-05"), 
@@ -62,7 +62,7 @@ INSERT INTO Orders (OrderID, ClientID, ProductID , Quantity, Cost, Date) VALUES
 (30, "Cl1", "P1", 10, 500, "2022-09-01"); 
 ```
 
-```
+```SQL
 INSERT INTO Products (ProductID, ProductName, BuyPrice, SellPrice, NumberOfItems) VALUES 
 ("P1", "Artificial grass bags ", 40, 50, 100), 
 ("P2", "Wood panels", 15, 20, 250), 
@@ -72,7 +72,7 @@ INSERT INTO Products (ProductID, ProductName, BuyPrice, SellPrice, NumberOfItems
 ("P6", "Water fountain", 65, 80, 15);
 ```
 
-```
+```SQL
 INSERT INTO Activity(ActivityID, Properties) VALUES  
 (1, '{ "ClientID": "Cl1", "ProductID": "P1", "Order": "True" }' ),  
 (2, '{ "ClientID": "Cl2", "ProductID": "P4", "Order": "False" }' ),  
@@ -93,7 +93,7 @@ Task Instructions
 Task 1
 
 Lucky Shrub need to find out how many orders were placed by clients with the following Client IDs in 2022; Cl1, Cl2 and Cl3. They have created the following query to extract this information.  
-```
+```SQL
 SELECT CONCAT("Cl1: ", COUNT(OrderID), "orders") AS "Total number of orders" FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl1" UNION SELECT CONCAT("Cl2: ", COUNT(OrderID), "orders") FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl2" UNION SELECT CONCAT("Cl3: ", COUNT(OrderID), "orders") FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl3"; 
 ```
 
@@ -136,4 +136,97 @@ Use the following code to access the property value without double quotations fr
 The output result of the query is shown in the screenshot below.
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/46dfc360-f1ab-43f9-93c4-7637e7d556ed)
+
+
+# Solution: MySQL optimization techniques exercise
+Once you have completed the tasks in the ungraded lab, you can check and compare your answers with the following solutions.
+
+Task 1 Solution
+Lucky Shrub need to find out how many orders were placed by clients with the following Client IDs in 2022: Cl1, Cl2 and Cl3.
+
+They have created the following query to extract this information.
+
+```SQL
+SELECT CONCAT("Cl1: ", COUNT(OrderID), "orders") AS "Total number of orders" 
+FROM Orders 
+WHERE YEAR(Date) = 2022 AND ClientID = "Cl1" 
+UNION 
+SELECT CONCAT("Cl2: ", COUNT(OrderID), "orders") 
+FROM Orders 
+WHERE YEAR(Date) = 2022 AND ClientID = "Cl2" 
+UNION 
+SELECT CONCAT("Cl3: ", COUNT(OrderID), "orders") 
+FROM Orders 
+WHERE YEAR(Date) = 2022 AND ClientID = "Cl3";
+```
+
+The output result of the query is shown in the screenshot below.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/92bb7d94-9dc0-44a7-80fd-d71d6bd37ba2)
+
+Help Lucky Shrub to optimize this query by recreating it as a common table expression (CTE).
+
+Solution
+```SQL
+WITH 
+CL1_Orders AS (SELECT CONCAT("Cl1: ", COUNT(OrderID), "orders") AS "Total number of orders"  
+FROM Orders 
+WHERE YEAR(Date) = 2022 AND ClientID = "Cl1"), 
+CL2_Orders AS (SELECT  CONCAT("Cl2: ", COUNT(OrderID), "orders") 
+FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl2"), 
+CL3_Orders AS (SELECT  CONCAT("Cl3: ", COUNT(OrderID), "orders") 
+FROM Orders WHERE YEAR(Date) = 2022 AND ClientID = "Cl3") 
+SELECT * FROM CL1_Orders
+UNION 
+SELECT * FROM CL2_Orders
+UNION 
+SELECT * FROM CL3_Orders;
+```
+
+Task 2 Solution 
+Lucky Shrub need you to help them to create a prepared statement called GetOrderDetail. The prepared statement should accept two input arguments: a ClientID value and a year value. The statement should return the order id, the quantity, the order cost and the order date from the Orders table. 
+
+The output result of an example of this query that takes the parameters of ClientID (Cl1) and Year (2020) is shown in the screenshot below:
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/7b153acd-31f8-490e-a329-3a727ed9bad2)
+
+Solution
+```SQL
+PREPARE GetOrderDetail FROM 'SELECT OrderID, Quantity, Cost, Date FROM Orders WHERE ClientID = ? AND YEAR(Date) = ? ';
+```
+
+Task 3 Solution
+The Lucky Shrub system logs the ClientID of each client, and the ProductID of the products they order, in a JSON Properties column in the Activity table.
+
+The screenshot below shows the data content inside the Activity table.
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/76fc3fee-6050-4972-9230-1038c75f412f)
+
+You need to utilize the Properties column data to output the product id, name, buy price and sell price of the product where the Order value in the Activity table is True.
+
+Tips: 
+
+The product name, buy price and sell price data must be extracted from the Products table.
+
+Use the following code to access the property value with double quotations from the JSON datatype: ->'$.PropertyName  
+
+Use the following code to access the property value without double quotations from JSON datatype: ->>'$. PropertyName
+
+ The output result of the query is shown in the screenshot below. 
+
+ ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/ba4fe745-e2dc-44ba-adb5-5a74dd1257d5)
+
+ Solution
+
+```SQL
+SELECT Activity.Properties ->>'$.ProductID' 
+AS ProductID, Products.ProductName, Products.BuyPrice, Products.SellPrice 
+FROM Products INNER JOIN Activity 
+ON Products.ProductID = Activity.Properties ->>'$.ProductID' 
+WHERE Activity.Properties ->>'$.Order' = "True";
+```
+
+
+
+
 
