@@ -1,9 +1,13 @@
 Lab Instructions
+
 Lucky Shrub needs to query their database. They can do this by using functions and stored procedures in MySQL. In this lab, you must complete a series of tasks to help Lucky Shrub staff query data from the Orders table in their database.
 
 The Orders table contains information about the Order ID, Client ID, Product ID, Quantity and Cost as shown in the following screenshot.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/6f32750e-5625-47bf-bbee-cbb6bc771584)
+
 Prerequisites
+
 First, create the Lucky Shrub database in your MySQL environment. Then, create and populate the Orders table with the relevant data inside the Lucky Shrub database.
 
 The code to create the database and the Orders table is listed below.
@@ -58,7 +62,7 @@ INSERT INTO Orders(OrderID, ClientID, ProductID , Quantity, Cost, Date) VALUES
 (30, "Cl1", "P1", 10, 500, "2022-09-01");
 ```
 
- There are two main objectives in this activity:
+There are two main objectives in this activity:
 
 Develop a user defined function
 
@@ -71,6 +75,9 @@ Task 1:
 
 Create a SQL function that prints the cost value of a specific order based on the user input of the OrderID. The expected output result should be the same as the result in the screenshot below when you call the function with an OrderID of 5.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/51d46ea6-d7f6-4301-9ae2-7754337b54b5)
+
+
 Task 2:
 
 Create a stored procedure called GetDiscount. This stored procedure must return the final cost of the customer's order after the discount value has been deducted. 
@@ -82,6 +89,9 @@ The procedure should take one parameter that accepts a user input value of an Or
 The procedure must find the order quantity of the specific OrderID. 
 
 If the value of the order quantity is more than or equal to 20 then the procedure should return the new cost after a 20% discount. 
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/432bdf20-66fc-4d87-b62e-db26331498bf)
+
 
 If the value of the order quantity is less than 20 and more than or equal to 10 then the procedure should return the new cost after a 10% discount.
 
