@@ -1,4 +1,5 @@
 Lab Instructions
+
 Lucky Shrub need to execute a series of SELECT queries against their database to retrieve information on their employees and client orders.
 
 However, they need to optimize these queries first to make sure that they execute quickly and efficiently. They can make these queries more efficient using MySQL database optimization techniques.
@@ -11,9 +12,16 @@ Let's take a quick look at these tables and the information they contain.
 
 The Orders table contains information about the OrderID, ClientID, Product ID, Quantity, Cost and Date of each order.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/4ae0556f-6199-4baf-a2c0-17e94e7fa0c2)
+
+
 The Employees table contains information about the EmployeeID, FullName, Role, Department of each employee as shown below.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/91957a6b-1dba-40ae-b5ce-d0c5c8d96d45)
+
+
 Prerequisites
+
 First, you must create the Lucky Shrub database in your MySQL environment. Then, you must create and populate the Orders and Employees tables with the relevant data.
 
 The code to create the database and related tables is as follows:
@@ -105,6 +113,8 @@ Rewrite the SELECT statement so that it is optimized.
 
 The expected output result should be the same as the following screenshot when you execute the rewritten query.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/9f24466f-2389-4c27-9b03-5a2333cfee4c)
+
 
 Task 2
 Lucky Shrub need to find the order placed by the client Cl1. They have written the following query to complete this task:
@@ -113,9 +123,15 @@ SELECT * FROM Orders WHERE ClientID ='Cl1';
 ```
 However, this query's execution plan shows that it does not use an index to perform this search, as indicated by the NULL values in possible_keys and keys columns.  
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/4052facb-a473-41cc-b8f0-563158a3a2f5)
+
+
 Help Lucky Shrub to optimize this query by creating an index named IdxClientID on the required column of the Orders table. Once you have created the index, run the same SELECT statement as above with the EXPLAIN statement.
 
 The expected output result should be the same as the following screenshot when executed:
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/d3810f45-a2b8-4f70-add2-2612d30546cc)
+
 
 Task 3
 Lucky Shrub have written the following SELECT query to find the details of the employee whose last name is 'Tolo'
@@ -135,5 +151,8 @@ Step 2: Populate the ReverseFullName column with the name of each employee as it
 Step 3: Finally, create an index named IdxReverseFullName on the ReverseFullName column.
 
 Follow these steps first and then rewrite the SELECT query and improve its performance so that it uses a trailing wildcard instead of the leading wild card.
-
 The expected output result when you execute the rewritten query should be the same as the result in the following screenshot:
+
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f4337617-2c88-44dd-8cd0-fa90f542d393)
+
