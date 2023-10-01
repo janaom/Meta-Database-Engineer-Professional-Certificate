@@ -1,9 +1,14 @@
 Scenario
+
 Lucky Shrub needs to perform data analysis to develop insights into the performance and progress of the business. They can carry out this task by analyzing the data contained within the Clients, Orders, Products and Addresses tables within their database, as shown in the following ER-Diagram:
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/3b181486-a913-4f9f-9365-b0ffc1150d72)
+
 
 Help Lucky Shrub to generate insights into their data by completing the tasks within this lab.
 
 Prerequisites
+
 To complete this lab, you must first make sure that the Lucky Shrub database and tables have been built within your MySQL environment. The code to create the database and tables is as follows:
 
 1. Create the database:
@@ -108,6 +113,9 @@ Lucky Shrub need to evaluate the performance of their business by performing dat
 Task 1
 Lucky Shrub need to find out how many sycamore trees they’ve sold over the past few years. Sycamore trees have been assigned an ID of P4 in the products table in the database. Create a query that returns the total quantity of all products with the ID of P4 sold in the years 2020, 2021 and 2022. The expected output of the query must resemble the following screenshot:
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f7df23c8-abca-4c0f-bb06-e23aac8eda9d)
+
+
 Task 2
 Lucky Shrub need information on all their clients and the orders that they placed in the years 2022 and 2021. See if you can help them by extracting the required information from each of the following tables:
 
@@ -121,6 +129,9 @@ Lucky Shrub need information on all their clients and the orders that they place
 
 The result set should be ordered by the orders date column as shown in the following screenshot.
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/f22c7a75-0b9e-42e9-a614-9dac9337e4fa)
+
+
 Task 3
 Lucky Shrub needs to analyze the sales performance of their Patio slates product in the year 2021. This product has a Product ID of P3. Help Lucky Shrub to analyze the performance of this product by developing a function called FindSoldQuantity that enables them to:
 
@@ -129,3 +140,6 @@ Lucky Shrub needs to analyze the sales performance of their Patio slates product
 • And display the total quantity of the product sold in the given year.
 
 For example, if Lucky Shrub enters a product id P3 and the year 2021, then the output result must be the same as the following screenshot:
+
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/4f6804ee-c747-49d6-9def-a8d5f882acaa)
+
