@@ -63,6 +63,8 @@ INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, S
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/40fd83a8-0200-4224-8dd4-1f21102eb15d)
 
+![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/3725b48d-9eb7-4d18-a220-fc9544aceae0)
+
 
 Instructions 
 
