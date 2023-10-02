@@ -1,8 +1,8 @@
-Goal
+# Goal
 
 The goal of this exercise is for you to learn how to work with string values in a database. The objective is to allow you to practice working with string data types in SQL. This exercise focuses on the two most used string datatypes in SQL: CHAR and VARCHAR.
 
-Scenario
+# Scenario
 
 Mr. Carl Merkel owns a small business that sells mobile devices called “CM Mobiles”. He wants to create a new table to store key information about customers including customer username, customer full name and customer email address as shown in the following table of data. 
 
@@ -10,7 +10,7 @@ Customer Table:
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/10ae3560-6284-40a7-902b-6d2839e81f9f)
 
 
-Instructions
+# Instructions
 
 Please attempt the below tasks before you continue, so you can check and compare your answers with our solution.
 
@@ -56,13 +56,13 @@ Note: You need to have a database to create the table inside of it. If you don�
 
 
 1.	Type the following SQL statement inside the SQL terminal editor in the Coursera platform.
-```
+```SQL
 CREATE DATABASE cm_devices;
 ```
 2.	Press Enter to execute the CREATE DATABASE statement.
 
 3.	Make sure you select the database in order to use it by typing the following SQL statement.
-```
+```SQL
 USE cm_devices;
 ```
 Press Enter to execute the query. The output result: “Database changed” is displayed in the terminal section. 
@@ -86,8 +86,9 @@ CREATE TABLE customers (username CHAR(9), fullName VARCHAR(100), email VARCHAR(2
 5.      Execute the query by pressing enter.
 
 If you have followed all the steps correctly, you should now be able to see the customers table created inside the cm_devices database by typing:
-
+```SQL
 SHOW tables;
+```
 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/49be597c-696f-4a57-a3ad-a7dcd8429038)
 
@@ -97,7 +98,7 @@ Press enter to execute the query. The output displays all tables existing in the
 Well done! You have correctly defined the string data types and created the customer table.
 
 If you want to check the structure of the customers table type the following SQL statement and press Enter.
-```
+```SQL
 SHOW columns FROM customers; 
 ```
 This will show you all the customers table columns and data types.
@@ -132,7 +133,7 @@ A. Declare the columns with the right data type for each.
 
 B. Write the SQL statement that creates the feedback table.
 
-Solution:
+# Solution:
 
 A:  Feedback id: CHAR(8)
 
@@ -141,6 +142,6 @@ A:  Feedback id: CHAR(8)
       Comment:  TEXT(500)  
 
 B:  
-```
+```SQL
 CREATE TABLE feedback(feedbackID CHAR(8), feedbackType VARCHAR(100), comment TEXT(500));
 ```
