@@ -80,7 +80,7 @@ SQL statement
 3.      Assign each column a suitable datatype as described earlier. 
 
 4.      Add a closing parenthesis and a semi-colon at the end of the SQL statement. The complete SQL statement is shown below. 
-```
+```SQL
 CREATE TABLE customers (username CHAR(9), fullName VARCHAR(100), email VARCHAR(255)); 
 ```
 5.      Execute the query by pressing enter.
