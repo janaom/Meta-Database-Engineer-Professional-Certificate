@@ -1,19 +1,19 @@
-Goal
+# Goal
 
 Practice how to choose suitable data types for different kinds of columns in the table
 
-Exercise objectives
+# Exercise objectives
 
 This exercise demonstrates how to choose suitable data types for a variety of columns to store data as string, integer, date and decimal values. 
 
-Scenario
+# Scenario
 
 Mr. Carl Merkel owns a small business that sells mobile devices called “CM Mobiles” in Harrow town near London. He wants to create a database to store key information about customers’ orders in order to generate invoices for his customers including customer name, order date, quantity and total price. This data can be seen in the following invoice table: 
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/867a489b-78c3-474b-8e8e-ea06a5aa8827)
 
 
 
-Instructions
+# Instructions
 
 Please attempt the following tasks before you continue, so you can check and compare your answers with the solution.
 
@@ -54,14 +54,14 @@ Note: You need to have a database so that you can create the table inside it. If
 
 1. Type the following SQL statement inside the SQL terminal editor on the Coursera platform:
 
-```
+```SQL
 CREATE DATABASE cm_devices; 
 ```
 
 2. Press Enter to execute the create database statement. 
 
 3. Make sure you select the database to use it by typing the following SQL statement and press Enter:
-```
+```SQL
 USE cm_devices; 
 ```
 ![image](https://github.com/janaom/Meta-Database-Engineer-Professional-Certificate/assets/83917694/6111562c-46f6-4fab-ba59-7872783f6b8a)
@@ -77,14 +77,14 @@ Create the SQL statement as follows:
 
 4. Add a closing parenthesis and a semi-colon to the end of the SQL statement as follows: 
 
-```
+```SQL
 CREATE TABLE invoice (customerName VARCHAR(50), orderDate DATE, quantity INT, price DECIMAL); 
 ```
 
 Press Enter to execute the query
 
 If you have followed all the steps correctly, you should now be able to see the invoices table created inside the cm_devices database by typing:
-```
+```SQL
 SHOW tables;
 ```
 Press Enter to execute the query. The output result shows the tables within the cm_devices database. 
@@ -92,7 +92,7 @@ Press Enter to execute the query. The output result shows the tables within the 
 
 
 If you want to check the structure of the invoices table, type the following SQL statement and press Enter.
-```
+```SQL
 SHOW columns FROM invoice; 
 ```
 This statement displays the invoice table structure.
@@ -115,7 +115,7 @@ Mr. Carl needs to have a new table to store the contact details of each customer
 
 You are required to choose a relevant data type for each of the columns.  
 
-Solution:
+# Solution:
 
 Account number: INTEGER
 
