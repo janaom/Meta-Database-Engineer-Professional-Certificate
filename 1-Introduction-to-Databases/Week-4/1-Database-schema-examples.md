@@ -1,9 +1,9 @@
-Goal 
+# Goal 
 
 Introduce an example of a database schema to demonstrate how data can be organized and related in tables.
 
 
-Objectives  
+# Objectives  
 
 Understand how to design a database schema
 
@@ -33,7 +33,7 @@ Step 3: Create relationships between tables
 
  
 
-Instructions 
+# Instructions 
 
 Please attempt the following tasks before you continue, so that you can check and compare your answers with the solution. 
 
@@ -102,7 +102,7 @@ Additional task (optional)
 You are required to extend the customized chinook schema by adding a new table called "location" that shows the city and the country the artist lives in. 
 
 
-Solution 
+# Solution 
 
 Add a new table called location  
 
